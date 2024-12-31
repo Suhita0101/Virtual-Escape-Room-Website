@@ -1,0 +1,543 @@
+/* General Styling */
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  /* Stacks the header, main content, and footer vertically */
+    font-family: 'Creepster', cursive; /* Scary font */
+}
+
+/* Add transition to the splash screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #e80000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Add transition to the main page visibility */
+#main-page {
+    display: none;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+}
+
+/* Background Image Styling */
+.splash-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.8; /* Makes the image slightly translucent */
+}
+
+/* Text Styling */
+#splash-screen h1 {
+    font-size: 4em;
+    margin: 0;
+    animation: flicker 2s infinite; /* Flickering text animation */
+    z-index: 2;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+#splash-screen p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px #e80000;
+    animation: fade-in 3s ease-in-out;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Animation for flickering effect */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.5;
+    }
+}
+
+/* Animation for fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Main content (scrollable) */
+main {
+    flex-grow: 1;  /* This allows the content to expand and take up available space */
+    overflow-y: auto;  /* Enables scrolling for the content */
+    padding: 20px;  /* Optional: add some padding to content */
+    background: url('box-bg.jpg') no-repeat center center; /* Adds your background image */
+    background-size: cover;  /* This ensures the image covers the entire header */
+    background-position: center;  /* Keeps the image centered */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+}
+
+/* Main Page */
+#main-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures it covers the viewport height */
+    background-color: #000; /* Black background to match the theme */
+    color: #e80000;
+}
+
+/* Center the Demo Videos heading */
+.demo-heading {
+    text-align: center;  /* Aligns the heading to the center */
+    font-size: 24px;     /* Adjust the font size */
+    font-weight: bold;   /* Makes the heading bold */
+    margin-top: 40px;    /* Adds space between the previous content and the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    color: #e80000;         /* Sets the text color */
+}
+
+
+/* Add a transition for fading in and out */
+.fade-section {
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+}
+  
+.fade-section.visible {
+    opacity: 1; /* Fully visible when the class is added */
+}
+
+/* Container for the video row */
+.video-row {
+    display: flex;             /* Aligns the videos in a row */
+    justify-content: space-between; /* Adds space between the videos */
+    gap: 20px;                 /* Adds gap between the video containers */
+    margin-bottom: 30px;       /* Adds space below the row */
+}
+  
+/* Style for each video container */
+.video-container {
+    position: relative;   /* Necessary for maintaining the aspect ratio */
+    width: 38%;           /* Makes the container take up half the row */
+    padding-bottom: 21.375%;  /* This creates the 16:9 aspect ratio (9/16 = 0.5625, 1/16 * 100 = 6.25%) */
+    height: 0;            /* Ensures the height is calculated based on width */
+    margin: 0 auto;       /* Centers the videos */
+}
+
+/* Making sure the iframe fills the container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 20px; /* Adds space between the boxes */
+    margin-top: 30px;
+}
+
+.review-card {
+    background-color: #1a0000;
+    color: #e80000;
+    border: 2px solid #e80000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.review-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.review-card p strong {
+    font-weight: bold;
+}
+
+.review-form {
+    background-color: #1a0000;
+    color: #e80000;
+    padding: 20px;
+    margin-top: 30px;
+    border: 2px solid #e80000;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px; /* Limit form width */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width */
+}
+
+.review-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block; /* Ensure label appears above the input field */
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 1px solid #e80000;
+    color: #333;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important! Ensures the padding and border are included inside the width */
+    margin-bottom: 10px; /* Added margin-bottom to provide space between the fields */
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #e80000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+button:active {
+    background-color: #b30000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full screen width */
+    height: 100%; /* Full screen height */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.anime-image {
+    position: relative;
+    animation: shake 0.5s ease-in-out infinite; 
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0); /* Initial position */
+    }
+    25% {
+        transform: translateX(-10px); /* Move 10px to the left */
+    }
+    50% {
+        transform: translateX(10px); /* Move 10px to the right */
+    }
+    75% {
+        transform: translateX(-10px); /* Move 10px to the left */
+    }
+    100% {
+        transform: translateX(0); /* Return to initial position */
+    }
+}
+
+/* Close Button */
+.close-btn {
+    color: #b30000;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(152, 130, 130);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: url('header-bg.jpg') no-repeat center center; /* Adds your background image */
+    background-size: cover;  /* This ensures the image covers the entire header */
+    background-position: center;  /* Keeps the image centered */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    width: 100%;  /* Ensures the header takes up the full width */
+    height: 200px;  /* Adjust the height as needed */
+    flex-shrink: 0;  /* Prevents header from shrinking */
+    background-color: #1a0000; /* Dark red background */
+    color: #e80000; /* Blood red text */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5); /* Eerie red glow */
+    position: relative; /* For additional effects like overlays, if needed */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: 0; /* Ensures the overlay is behind the text */
+}
+
+header h1, header h2 {
+    position: relative; /* Keeps text above the overlay */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 10px #e80000; /* Glowing effect */
+}
+
+header h2 {
+    font-size: 1.5em;
+    font-style: italic;
+    text-shadow: 2px 2px 10px #e80000; /* Glowing effect */
+}
+  
+
+nav {
+    background-color: #330000; /* Deep red */
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e80000;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px #e80000; /* Glowing text */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff3333;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background-color: #000; /* Black background */
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.7); /* Red glow around sections */
+    color: #e80000; /* Blood red text */
+}
+
+
+.section.active {
+    display: block;
+}
+
+/* Button Styling */
+.btn-start-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-start-now:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.btn-start-now:active {
+    background-color: #388e3c; /* Even darker green when button is pressed */
+}
+
+
+.room-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.room-card {
+    width: 300px;
+    background-color: #1a0000; /* Dark red card */
+    border: 2px solid #e80000; /* Blood red border */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+    padding: 15px;
+    text-align: center;
+    color: #e80000;
+}
+
+.room-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the space without distortion */
+    border: 1px solid #e80000;
+}
+
+.room-card h4 {
+    margin: 10px 0;
+    text-shadow: 1px 1px 5px #e80000; /* Glow effect */
+}
+
+/* Leaderboard */
+#leaderboard-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard-container li {
+    background: #1a0000;
+    color: #e80000;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+}
+
+/* Join Form */
+#join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#join-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #e80000;
+    border-radius: 5px;
+    background: #1a0000;
+    color: #e80000;
+    box-shadow: inset 0 2px 5px rgba(255, 0, 0, 0.3);
+}
+
+#join-form button {
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background: #e80000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#join-form button:hover {
+    background: #ff4d4d;
+}
+
+.hidden {
+    display: none;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:whitesmoke;
+    color: #e80000;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#loading-animation {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1a0000; /* Deep red */
+    text-align: center;
+    padding: 20px;
+    color: #e80000;
+    font-size: 0.9em;
+    box-shadow: 0 -5px 10px rgba(255, 0, 0, 0.5);
+    flex-shrink: 0;  /* Prevents footer from shrinking */
+}

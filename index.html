@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Escape Room</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="Theme.jpg" alt="Background Image" class="splash-bg"/>
+        <h1>Welcome to Unlock Your Escape</h1>
+        <p>The Ultimate Puzzle Adventure Awaits!</p>
+    </div>
+
+    <!-- Main Page -->
+    <div id="main-page">
+        <!-- Header Section -->
+        <header>
+            <h1>Unlock Your Escape</h1>
+            <h2>Unravel the mystery, escape to victory</h2>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#" data-section="main-content">Home</a></li>
+                <li><a href="#" data-section="about">About</a></li>
+                <li><a href="#" data-section="rooms">Rooms</a></li>
+                <li><a href="#" data-section="leaderboard">Leaderboard</a></li>
+                <li><a href="#" data-section="join">Join a Room</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section Containers -->
+        <main>
+
+            <!-- Main Content Section -->
+            <section id="main-content" class="section active">
+                <h3>Welcome to the Virtual Escape Room</h3>
+                <p>Dive into an immersive experience where challenges and mysteries await. Test your skills, compete with others, and enjoy the adventure of a lifetime!</p>
+
+                <!-- Demo Videos Heading -->
+                <h2 class="demo-heading">Demo Videos</h2>
+
+                <!-- Row for Video 1 and Video 2 -->
+                <div class="video-row">
+                    <!-- YouTube Video 1 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZmAvNC8P0aA?si=Pu_tRZSvYrfkwOr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- YouTube Video 2 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Cbj1-5_AJuY?si=yiOWMu6SgZdQ9Bcn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- YouTube Video 3 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0PWE4Hw7Twc?si=-QPHVP05Fm7WPsKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Row for Video 3 and Video 4 -->
+                <div class="video-row">
+                    <!-- YouTube Video 4 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/uO8PKrlWTIM?si=n9bMQs55ZJMXBInt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- YouTube Video 5 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ARVp9SHkihE?si=V1qLbD94w9c4AqQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- YouTube Video 6 -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/2OXq9G3e98Q?si=gfSheDDDbXjvcA4y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Review Section -->
+                <div id="reviews" class="reviews-section">
+                    <h3>User Reviews</h3>
+
+                    <!-- Review Boxes -->
+                    <div class="reviews-grid">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <h4>John Doe</h4>
+                            <p><strong>Rating:</strong> ★★★★☆</p>
+                            <p>"This escape room is amazing! The puzzles were challenging but fun, and the atmosphere was so immersive. Highly recommend!"</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <h4>Jane Smith</h4>
+                            <p><strong>Rating:</strong> ★★★★★</p>
+                            <p>"Had a blast! The teamwork required for the puzzles made it so much more enjoyable. Can't wait for the next one!"</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <h4>Mark Lee</h4>
+                            <p><strong>Rating:</strong> ★★★☆☆</p>
+                            <p>"It was a fun experience, but some puzzles were a bit too difficult. Overall, still a great time with friends!"</p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="review-card">
+                            <h4>Amy Adams</h4>
+                            <p><strong>Rating:</strong> ★★★★★</p>
+                            <p>"Loved it! The escape room really made us think, and we had a great time working together. Will definitely come back!"</p>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="review-card">
+                            <h4>Chris Morgan</h4>
+                            <p><strong>Rating:</strong> ★★★☆☆</p>
+                            <p>"The puzzles were interesting but could have been a little more challenging. Still, a good time with friends."</p>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="review-card">
+                            <h4>Linda White</h4>
+                            <p><strong>Rating:</strong> ★★★★★</p>
+                            <p>"One of the best escape rooms I’ve done! The story and puzzles were so engaging. Highly recommend to anyone!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Submission Form -->
+                <div id="review-form" class="review-form">
+                    <h3>Submit Your Review</h3>
+                    <form action="/submit-review" method="POST">
+                        <div class="form-field">
+                            <label for="user-name">Your Name:</label>
+                            <input type="text" id="user-name" name="user-name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="escape-room">Escape Room Played:</label>
+                            <input type="text" id="escape-room" name="escape-room" placeholder="Enter the escape room name" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="review">Your Review:</label>
+                            <textarea id="review" name="review" placeholder="Enter your review here" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="rating">Rating:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="5">★★★★★</option>
+                                <option value="4">★★★★☆</option>
+                                <option value="3">★★★☆☆</option>
+                                <option value="2">★★☆☆☆</option>
+                                <option value="1">★☆☆☆☆</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Submit Review</button>
+                    </form>
+                </div>
+
+                <!-- Modal Structure -->
+                <div id="review-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2>Thank You for Your Review!</h2>
+                        <p>Your review has been successfully submitted.</p>
+                        <img src="anime-character.jpg" alt="Anime Character" class="anime-image">
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="about" class="section hidden">
+                <h3>About Our Escape Rooms</h3>
+                <p>Experience the thrill of solving puzzles, uncovering clues, and escaping themed rooms in real-time. Perfect for gamers, puzzle enthusiasts, and team-building groups!</p>
+                
+                <h4>What is a Virtual Escape Room?</h4>
+                <p>A virtual escape room is a fun and immersive online game where you and your team solve puzzles, decipher clues, and complete challenges to "escape" from a themed scenario. Think of it as a digital version of a real-life escape room – but one that you can play from anywhere, whether you're at home, at work, or on the go!</p>
+                <p>Our Virtual Escape Room offers a unique multiplayer experience that brings people together in an exciting and interactive way.</p>
+            
+                <h4>How Does It Work?</h4>
+                <ul>
+                    <li><strong>Pick Your Theme:</strong> Choose from a variety of exciting rooms, each with its own storyline and challenges – from solving a mysterious crime to escaping a haunted castle or defusing a ticking time bomb.</li>
+                    <li><strong>Form a Team or Join One:</strong> Play with friends, family, or colleagues. You can also team up with other players around the world to collaborate in solving puzzles.</li>
+                    <li><strong>Solve Puzzles & Find Clues:</strong> Use your observation, logic, and teamwork skills to uncover hidden clues, unlock doors, and solve riddles. Some challenges require keen attention to detail, while others might test your ability to think outside the box.</li>
+                    <li><strong>Race Against the Clock:</strong> Most rooms are timed, adding an extra layer of excitement as you work against the countdown to escape.</li>
+                    <li><strong>Climb the Leaderboard:</strong> Compete with other teams by finishing quickly and earning points for clever solutions.</li>
+                </ul>
+            
+                <h4>Who Is It For?</h4>
+                <ul>
+                    <li><strong>Escape Room Enthusiasts:</strong> If you love solving puzzles and exploring mysteries, this is your playground.</li>
+                    <li><strong>Gamers:</strong> Dive into an engaging experience that combines strategy, adventure, and teamwork.</li>
+                    <li><strong>Friends & Families:</strong> A perfect way to connect with loved ones and share memorable moments.</li>
+                    <li><strong>Team-Building Groups:</strong> Strengthen your collaboration skills while having fun.</li>
+                </ul>
+            
+                <h4>Why Choose Our Virtual Escape Room?</h4>
+                <ul>
+                    <li><strong>Interactive Gameplay:</strong> Enjoy real-time interactions and teamwork to solve puzzles collaboratively.</li>
+                    <li><strong>Immersive Themes:</strong> Each room is carefully designed to transport you into a thrilling adventure.</li>
+                    <li><strong>Accessible Anywhere:</strong> All you need is an internet connection and your favorite device to play.</li>
+                    <li><strong>Fun for All Skill Levels:</strong> Whether you’re a beginner or an experienced player, our escape rooms offer challenges for everyone.</li>
+                </ul>
+            
+                <h4>How to Get Started?</h4>
+                <ul>
+                    <li><strong>Sign Up or Log In:</strong> Create an account to access your personalized escape room dashboard.</li>
+                    <li><strong>Browse Themes:</strong> Pick a room that sparks your curiosity or matches your team’s interest.</li>
+                    <li><strong>Invite Your Team:</strong> Share the link with friends or join an existing game to start playing.</li>
+                    <li><strong>Start the Adventure:</strong> Solve puzzles, crack codes, and escape before time runs out!</li>
+                </ul>
+            
+                <h4>Ready to Escape the Ordinary?</h4>
+                <p>Join our Virtual Escape Room for an unforgettable adventure filled with mystery, challenge, and excitement. Whether you’re solving clues with your closest friends or competing against teams worldwide, it’s time to test your wits and teamwork!</p>
+            
+                <a href="#rooms" class="btn-start-now">Start Now!</a>
+            </section>
+            
+
+            <section id="rooms" class="section hidden">
+                <h3>Choose Your Adventure</h3>
+                <div class="room-cards">
+                    <div class="room-card">
+                        <img src="image1.jpg" alt="Haunted Mansion">
+                        <h4>Haunted Mansion</h4>
+                        <p>Can you escape the clutches of the mansion’s ghosts?</p>
+                    </div>
+                    <div class="room-card">
+                        <img src="image2.jpg" alt="Treasure Island">
+                        <h4>Treasure Island</h4>
+                        <p>Discover the hidden treasure before time runs out!</p>
+                    </div>
+                    <div class="room-card">
+                        <img src="image3.jpg" alt="Mystery Lab">
+                        <h4>Mystery Lab</h4>
+                        <p>Uncover the scientist’s secrets and escape the lab!</p>
+                    </div>
+                    <div class="room-card">
+                        <img src="image4.jpg" alt="Mystic Forest">
+                        <h4>Mystic Forest</h4>
+                        <p>Navigate through the enchanted woods and uncover its hidden secrets!</p>
+                    </div>
+                    
+                    <div class="room-card">
+                        <img src="image5.jpg" alt="Ancient Pyramid">
+                        <h4>Ancient Pyramid</h4>
+                        <p>Explore the mysterious tombs and solve ancient riddles to escape!</p>
+                    </div>
+                    
+                    <div class="room-card">
+                        <img src="image6.jpg" alt="Time Travel Paradox">
+                        <h4>Time Travel Paradox</h4>
+                        <p>Jump through time periods to fix the timeline and find your way back!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="leaderboard" class="section hidden">
+                <h3>Leaderboard</h3>
+                <div id="leaderboard-container">
+                    <ul>
+                        <li>Team Alpha - 45 mins</li>
+                        <li>The Brainiacs - 50 mins</li>
+                        <li>Escape Masters - 55 mins</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="join" class="section hidden">
+                <h3>Join a Room</h3>
+                <p>Enter your details to join your team and start solving puzzles!</p>
+                <form id="join-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
+                    
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" required>
+                        <option value="" disabled selected>Select a room type</option>
+                        <option value="haunted mansion">Haunted Mansion</option>
+                        <option value="Treasure Island">Tresure Island</option>
+                        <option value="Mystery Lab">Mystery Lab </option>
+                        <option value="Mystic Forest">Mystic Forest </option>
+                        <option value="Ancient Pyramid">Ancient Pyramid </option>
+                        <option value="Time Travel Paradox">Time Travel Paradox </option>
+                    </select>
+                    
+                    <label for="room-id">Room ID:</label>
+                    <input type="text" id="room-id" placeholder="Enter Room ID" required>
+                    
+                    <button type="submit">Join</button>
+                </form>
+
+                <!-- Popup Section -->
+                <div id="popup" class="hidden">
+                    <img id="loading-animation" src="loading.gif" alt="Loading..." />
+                    <p id="popup-message"></p>
+                </div>
+                
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Virtual Escape Room. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
